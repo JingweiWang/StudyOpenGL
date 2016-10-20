@@ -30,15 +30,11 @@ $ ./*
 *macOS* 下的头文件: 
 
 ```c
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
 #include <GLUT/glut.h>
 ```
 
 *Windows* 下的头文件: 
 
 ```c
-#include <gl.h>
-#include <glu.h>
-#include <glut.h>
+#include <GL/glut.h>
 ```
