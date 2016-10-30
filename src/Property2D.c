@@ -27,7 +27,7 @@ void display(void)
     {
         glPointSize((float)(i + 1));
         glBegin(GL_POINTS);
-        glVertex2f(-0.4f + i / 5.0f, 0.8f);
+            glVertex2f(-0.4f + i / 5.0f, 0.8f);
         glEnd();
     }
     glPointSize(pointSize); //点尺寸恢复为前面的值
@@ -38,8 +38,8 @@ void display(void)
     {
         glLineWidth((float)(i + 1));
         glBegin(GL_LINES);
-        glVertex3f(-0.6f, 0.7f - i * 0.1f, 0.0f);
-        glVertex3f(0.6f, 0.7f - i * 0.1f, 0.0f);
+            glVertex3f(-0.6f, 0.7f - i * 0.1f, 0.0f);
+            glVertex3f(0.6f, 0.7f - i * 0.1f, 0.0f);
         glEnd();
     }
     glLineWidth(lineWidth);
@@ -48,23 +48,23 @@ void display(void)
     glGetIntegerv(GL_POLYGON_MODE, polygonMode);
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     glBegin(GL_TRIANGLES);
-    glVertex3f(-0.8f, 0.0f, 0.0f);
-    glVertex3f(-0.6f, 0.0f, 0.0f);
-    glVertex3f(-0.7f, 0.2f, 0.0f);
+        glVertex3f(-0.8f, 0.0f, 0.0f);
+        glVertex3f(-0.6f, 0.0f, 0.0f);
+        glVertex3f(-0.7f, 0.2f, 0.0f);
     glEnd();
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     glBegin(GL_TRIANGLES);
-    glVertex3f(0.1f, 0.0f, 0.0f);
-    glVertex3f(-0.1f, 0.0f, 0.0f);
-    glVertex3f(0.0f, 0.2f, 0.0f);
+        glVertex3f(0.1f, 0.0f, 0.0f);
+        glVertex3f(-0.1f, 0.0f, 0.0f);
+        glVertex3f(0.0f, 0.2f, 0.0f);
     glEnd();
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
     glBegin(GL_TRIANGLES);
-    glVertex3f(0.6f, 0.0f, 0.0f);
-    glVertex3f(0.8f, 0.0f, 0.0f);
-    glVertex3f(0.7f, 0.2f, 0.0f);
+        glVertex3f(0.6f, 0.0f, 0.0f);
+        glVertex3f(0.8f, 0.0f, 0.0f);
+        glVertex3f(0.7f, 0.2f, 0.0f);
     glEnd();
 
     glPolygonMode(GL_FRONT, polygonMode[0]);
@@ -76,24 +76,24 @@ void display(void)
     {
         glLineStipple(1, lineStipples[i]);
         glBegin(GL_LINES);
-        glVertex3f(-0.6f, -0.1f - i * 0.1f, 0.0f);
-        glVertex3f(-0.1f, -0.1f - i * 0.1f, 0.0f);
+            glVertex3f(-0.6f, -0.1f - i * 0.1f, 0.0f);
+            glVertex3f(-0.1f, -0.1f - i * 0.1f, 0.0f);
         glEnd();
         glLineStipple(3, lineStipples[i]);
         glBegin(GL_LINES);
-        glVertex3f(0.6f, -0.1f - i * 0.1f, 0.0f);
-        glVertex3f(0.1f, -0.1f - i * 0.1f, 0.0f);
+            glVertex3f(0.6f, -0.1f - i * 0.1f, 0.0f);
+            glVertex3f(0.1f, -0.1f - i * 0.1f, 0.0f);
         glEnd();
     }
     glDisable(GL_LINE_STIPPLE);
 
     //LINE LOOP
     glBegin(GL_LINE_LOOP);
-    glVertex3f(-0.35f, -0.75f, 0.0f);
-    glVertex3f(0.35f, -0.75f, 0.0f);
-    glVertex3f(0.2f, -0.57f, 0.0f);
-    glVertex3f(0.0f, -0.65f, 0.0f);
-    glVertex3f(-0.2f, -0.57f, 0.0f);
+        glVertex3f(-0.35f, -0.75f, 0.0f);
+        glVertex3f(0.35f, -0.75f, 0.0f);
+        glVertex3f(0.2f, -0.57f, 0.0f);
+        glVertex3f(0.0f, -0.65f, 0.0f);
+        glVertex3f(-0.2f, -0.57f, 0.0f);
     glEnd();
 
     glFlush();
