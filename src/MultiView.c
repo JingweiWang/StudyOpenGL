@@ -70,16 +70,15 @@ void reshape(int w, int h)
     win_width = w;
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE); // 显示模式RGBA+双缓存
-    int windowHandle = glutCreateWindow("MultiView");
+    glutCreateWindow("MultiView");
     glutReshapeWindow(win_width, win_height);
     glutDisplayFunc(display);
     glutReshapeFunc(reshape); // 窗口大小变化时
     init();
     glutMainLoop();
     glDeleteLists(object, 1);
-    return 0;
 }
